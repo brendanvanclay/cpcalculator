@@ -11,7 +11,7 @@ function calculate(){
     //Profit Calculation
     let profit = ((investment * leverage) * (perIncrease)) - (investment * leverage)
     //Show Profit in p tag
-    document.querySelector("p").innerHTML = "PROFIT: " + "$" + (Math.round(profit * 100) / 100).toFixed(2) + " " + "INCREASE: " + (Math.round(perIncrease * 100) / 100).toFixed(2) + "%";
+    document.querySelector("p").innerHTML = "PROFIT: " + "$" + (Math.round(profit * 100) / 100).toFixed(2) + " " + "INCREASE: " + (Math.round((perIncrease * 100) / 100)-1).toFixed(2) + "%";
 }
 //Click Event Fire on Calculate Button
 document.querySelector(".btn").addEventListener("click", calculate);
